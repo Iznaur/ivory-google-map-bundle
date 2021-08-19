@@ -75,7 +75,7 @@ abstract class AbstractIvoryGoogleMapExtensionTest extends TestCase
     protected function setUp()
     {
         $this->container = new ContainerBuilder();
-        $this->container->setParameter('kernel.root_dir', __DIR__.'/..');
+        $this->container->setParameter('kernel.project_dir', __DIR__);
         $this->container->setParameter('kernel.debug', $this->debug = false);
         $this->container->setParameter('locale', $this->locale = 'en');
         $this->container->set('httplug.client', $this->client = $this->createClientMock());
